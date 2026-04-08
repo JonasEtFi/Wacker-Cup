@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wacker Cup Trainingsergebnisse</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="site-nav">
+        <div class="nav-brand">
+          <img class="nav-logo" src="./assets/hc-wacker-munchen.png" alt="HC Wacker München Logo" />
+          <div>
+            <h1>Wacker Cup</h1>
+            <p class="season-label">Trainingsergebnisse</p>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a class="nav-link" href="./index.html">Zur Startseite</a>
+          <a class="nav-link" href="./training.html">Training bearbeiten</a>
+          <a class="nav-link" href="./admin.html">Admin</a>
+        </nav>
+      </aside>
+
+      <main class="layout">
+        <section class="card">
+          <div class="hero-headline">
+            <p class="hero-kicker">HC Wacker München</p>
+            <h2 class="display-title admin-title">Trainings</h2>
+          </div>
+
+          <div class="training-overview training-overview-page">
+            <div>
+              <div class="box-header">
+                <h3>Alle Ergebnisse</h3>
+                <p class="helper">Wähle ein Training in der Seitenleiste</p>
+              </div>
+              <div id="training-liste" class="session-list session-list-sidebar"></div>
+            </div>
+            <div id="training-detail" class="training-detail"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./trainings.js"></script>
+  </body>
+</html>

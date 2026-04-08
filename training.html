@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wacker Cup Training</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="site-nav">
+        <div class="nav-brand">
+          <img class="nav-logo" src="./assets/hc-wacker-munchen.png" alt="HC Wacker München Logo" />
+          <div>
+            <h1>Wacker Cup</h1>
+            <p class="season-label">Training</p>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a class="nav-link" href="./index.html">Zur Startseite</a>
+          <a class="nav-link" href="./trainings.html">Trainingsergebnisse</a>
+          <a class="nav-link" href="./admin.html">Spieler bearbeiten</a>
+        </nav>
+      </aside>
+
+      <main class="layout">
+        <section class="card">
+          <div class="hero-headline">
+            <p class="hero-kicker">HC Wacker München</p>
+            <h2 class="display-title admin-title">Training</h2>
+          </div>
+
+          <div id="admin-sperre" class="admin-lock admin-lock-page">
+            <label class="field">
+              <span>Passwort</span>
+              <input id="admin-passwort" type="password" autocomplete="current-password" />
+            </label>
+            <button id="admin-login" class="button" type="button">Training freischalten</button>
+            <p id="admin-fehler" class="helper error-text"></p>
+          </div>
+        </section>
+
+        <section id="admin-panel" class="card hidden">
+          <div class="admin-toolbar">
+            <button id="daten-zuruecksetzen" class="button button-secondary" type="button">Lokale Änderungen verwerfen</button>
+            <button id="daten-export" class="button" type="button">JSON exportieren</button>
+            <label class="button button-secondary upload-button">
+              JSON importieren
+              <input id="daten-import" type="file" accept="application/json" hidden />
+            </label>
+          </div>
+
+          <form id="ergebnis-form" class="admin-box">
+            <div class="box-header">
+              <h3>Training hinzufügen / bearbeiten</h3>
+              <p id="ergebnis-form-status" class="helper"></p>
+            </div>
+
+            <input id="einheit-id" type="hidden" />
+
+            <label class="field">
+              <span>Datum</span>
+              <input id="einheit-datum" type="date" required />
+            </label>
+
+            <label class="field">
+              <span>Bezeichnung</span>
+              <input id="einheit-label" type="text" placeholder="z. B. Dienstagstraining" />
+            </label>
+
+            <div class="admin-grid">
+              <label class="field">
+                <span class="team-score-label"><span class="team-chip team-chip-blue"><img class="team-logo team-logo-inverted" src="./assets/hc-wacker-munchen.png" alt="Team Blau" /></span><span>Ergebnis Blau</span></span>
+                <input id="team-blau-tore" type="number" min="0" value="0" />
+              </label>
+              <label class="field">
+                <span class="team-score-label"><span class="team-chip"><img class="team-logo" src="./assets/hc-wacker-munchen.png" alt="Team Weiß" /></span><span>Ergebnis Weiß</span></span>
+                <input id="team-weiss-tore" type="number" min="0" value="0" />
+              </label>
+            </div>
+
+            <div class="results-editor">
+              <div class="results-header">
+                <span>Spieler</span>
+                <span class="team-header"><span class="team-chip team-chip-blue"><img class="team-logo team-logo-inverted" src="./assets/hc-wacker-munchen.png" alt="Team Blau" /></span></span>
+                <span class="team-header"><span class="team-chip"><img class="team-logo" src="./assets/hc-wacker-munchen.png" alt="Team Weiß" /></span></span>
+              </div>
+              <div id="ergebnis-zeilen"></div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="button">Training speichern</button>
+              <button id="ergebnis-form-reset" type="button" class="button button-secondary">Formular leeren</button>
+            </div>
+          </form>
+
+          <div class="admin-box">
+            <div class="box-header">
+              <h3>Vorhandene Trainingseinheiten</h3>
+              <p class="helper">Zum Bearbeiten auswählen</p>
+            </div>
+            <div id="einheiten-liste" class="session-list"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./training.js"></script>
+  </body>
+</html>

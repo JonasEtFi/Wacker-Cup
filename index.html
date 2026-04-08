@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wacker Cup</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="site-nav">
+        <div class="nav-brand">
+          <img class="nav-logo" src="./assets/hc-wacker-munchen.png" alt="HC Wacker München Logo" />
+          <div>
+            <h1 id="app-title">Wacker Cup</h1>
+            <p id="season-label" class="season-label"></p>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <button id="nav-monat" class="nav-link is-active" type="button">Monatstabelle</button>
+          <button id="nav-saison" class="nav-link" type="button">Saisontabelle</button>
+          <a class="nav-link" href="./trainings.html">Trainingsergebnisse</a>
+          <button id="nav-spieler" class="nav-link" type="button">Spieler</button>
+          <a class="nav-link nav-link-admin" href="./admin.html">Admin</a>
+        </nav>
+      </aside>
+
+      <main class="layout">
+        <section class="hero card">
+          <div class="hero-headline">
+            <p class="hero-kicker">HC Wacker München</p>
+            <h2 class="display-title">Wacker Cup</h2>
+          </div>
+
+          <div class="hero-stage">
+            <div class="hero-stage-copy">
+              <span class="pill">Training Ranking</span>
+              <h3 id="tabellen-titel">Monatstabelle</h3>
+              <p id="tabellen-subtitle" class="card-subtitle">Auswahl und Ranking der aktuellen Trainingsergebnisse</p>
+
+              <div class="toolbar-actions">
+                <div class="segmented-control">
+                  <button id="ansicht-monat" class="button is-active" type="button">Monat</button>
+                  <button id="ansicht-saison" class="button" type="button">Saison</button>
+                </div>
+                <label id="monat-feld" class="inline-field">
+                  <span>Monat</span>
+                  <select id="monat-auswahl"></select>
+                </label>
+              </div>
+            </div>
+
+            <div class="hero-stage-logo">
+              <img class="hero-logo" src="./assets/hc-wacker-munchen.png" alt="HC Wacker München Logo" />
+            </div>
+          </div>
+        </section>
+
+        <section id="rangliste-sektion" class="card">
+          <div id="rangliste" class="table-wrapper"></div>
+        </section>
+
+        <section class="card">
+          <div class="box-header">
+            <h3>Letztes Ergebnis</h3>
+          </div>
+          <div id="letztes-ergebnis" class="latest-result"></div>
+        </section>
+
+        <section id="spieler-sektion" class="card">
+          <div class="card-header">
+            <div>
+              <h2>Spieler</h2>
+              <p class="card-subtitle">Alle im System hinterlegten Spieler</p>
+            </div>
+          </div>
+          <div id="spieler-liste" class="player-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

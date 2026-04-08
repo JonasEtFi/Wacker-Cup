@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wacker Cup Admin</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="site-nav">
+        <div class="nav-brand">
+          <img class="nav-logo" src="./assets/hc-wacker-munchen.png" alt="HC Wacker München Logo" />
+          <div>
+            <h1>Wacker Cup</h1>
+            <p class="season-label">Admin</p>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a class="nav-link" href="./index.html">Zur Startseite</a>
+          <a class="nav-link" href="./trainings.html">Trainingsergebnisse</a>
+          <a class="nav-link" href="./training.html">Training bearbeiten</a>
+        </nav>
+      </aside>
+
+      <main class="layout">
+        <section class="card">
+          <div class="hero-headline">
+            <p class="hero-kicker">HC Wacker München</p>
+            <h2 class="display-title admin-title">Admin</h2>
+          </div>
+
+          <div id="admin-sperre" class="admin-lock admin-lock-page">
+            <label class="field">
+              <span>Passwort</span>
+              <input id="admin-passwort" type="password" autocomplete="current-password" />
+            </label>
+            <button id="admin-login" class="button" type="button">Admin freischalten</button>
+            <p id="admin-fehler" class="helper error-text"></p>
+          </div>
+        </section>
+
+        <section id="admin-panel" class="card hidden">
+          <div class="admin-toolbar">
+            <button id="daten-zuruecksetzen" class="button button-secondary" type="button">Lokale Änderungen verwerfen</button>
+            <button id="daten-export" class="button" type="button">JSON exportieren</button>
+            <label class="button button-secondary upload-button">
+              JSON importieren
+              <input id="daten-import" type="file" accept="application/json" hidden />
+            </label>
+          </div>
+
+          <div class="admin-grid">
+            <form id="spieler-form" class="admin-box">
+              <div class="box-header">
+                <h3>Spieler</h3>
+                <p id="spieler-form-status" class="helper"></p>
+              </div>
+
+              <input id="spieler-id" type="hidden" />
+
+              <label class="field">
+                <span>Name</span>
+                <input id="spieler-name" type="text" required />
+              </label>
+
+              <label class="checkbox">
+                <input id="spieler-aktiv" type="checkbox" checked />
+                <span>Aktiv</span>
+              </label>
+
+              <div class="form-actions">
+                <button type="submit" class="button">Spieler speichern</button>
+                <button id="spieler-form-reset" type="button" class="button button-secondary">Formular leeren</button>
+                <button id="spieler-loeschen" type="button" class="button button-secondary">Spieler löschen</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="admin-box">
+            <div class="box-header">
+              <h3>Spielerübersicht</h3>
+            </div>
+            <div id="spieler-liste" class="player-grid"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./admin.js"></script>
+  </body>
+</html>
