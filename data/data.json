@@ -2,12 +2,13 @@
   "metadata": {
     "appTitle": "Wacker Cup",
     "seasonLabel": "Saison 2025/2026",
-    "adminPasswordHash": "7a12c01c30a5f3abedd5ec43ff6a3f84cd5a404b4860e9f6d476074f7e287a3a"
+    "adminPasswordHash": "7a12c01c30a5f3abedd5ec43ff6a3f84cd5a404b4860e9f6d476074f7e287a3a",
+    "adminPassword": "HCWAP"
   },
   "teams": [
     {
-      "id": "team-gruen",
-      "name": "Grün"
+      "id": "team-blau",
+      "name": "Blau"
     },
     {
       "id": "team-weiss",
@@ -16,128 +17,234 @@
   ],
   "players": [
     {
-      "id": "p1",
-      "name": "Max Bauer",
-      "number": 7,
-      "teamId": "team-gruen",
-      "active": true
-    },
-    {
-      "id": "p2",
-      "name": "Tobias Lang",
-      "number": 11,
-      "teamId": "team-gruen",
-      "active": true
-    },
-    {
-      "id": "p3",
-      "name": "Lukas Schmid",
-      "number": 18,
-      "teamId": "team-weiss",
-      "active": true
-    },
-    {
-      "id": "p4",
-      "name": "Felix Meier",
-      "number": 4,
-      "teamId": "team-weiss",
-      "active": true
-    },
-    {
-      "id": "p5",
-      "name": "Jonas Huber",
-      "number": 22,
-      "teamId": "team-gruen",
-      "active": true
-    },
-    {
-      "id": "p6",
-      "name": "David Koch",
-      "number": 30,
-      "teamId": "team-weiss",
-      "active": true
-    },
-    {
       "id": "p7",
       "name": "Jonas Fischer",
-      "number": 12,
-      "teamId": "team-gruen",
       "active": true
     },
     {
       "id": "p8",
-      "name": "Felix Winkliner",
-      "number": 14,
-      "teamId": "team-weiss",
+      "name": "Felix Winkler",
+      "active": true
+    },
+    {
+      "id": "player-07346fd9",
+      "name": "Alex Färber",
+      "active": true
+    },
+    {
+      "id": "player-a156d23a",
+      "name": "Ben Hüfner",
+      "active": true
+    },
+    {
+      "id": "player-d3034de8",
+      "name": "Conrad Fischbach",
+      "active": true
+    },
+    {
+      "id": "player-f0d1ae8f",
+      "name": "Dominique Färber",
+      "active": true
+    },
+    {
+      "id": "player-7ee0faaa",
+      "name": "Florentin Fischer",
+      "active": false
+    },
+    {
+      "id": "player-63d6d922",
+      "name": "Florian Funk",
+      "active": false
+    },
+    {
+      "id": "player-57bf9c58",
+      "name": "Jonas Steffens",
+      "active": true
+    },
+    {
+      "id": "player-bdc1d4c9",
+      "name": "Justus Schavoir",
+      "active": true
+    },
+    {
+      "id": "player-22a66db6",
+      "name": "Tim Schnizer",
+      "active": true
+    },
+    {
+      "id": "player-405f970e",
+      "name": "Willi Schmidt",
+      "active": false
+    },
+    {
+      "id": "player-4c45d554",
+      "name": "David Prieto",
+      "active": true
+    },
+    {
+      "id": "player-5c374640",
+      "name": "Hannes Funk",
+      "active": true
+    },
+    {
+      "id": "player-ab8bee9e",
+      "name": "Jelde Bruns",
+      "active": true
+    },
+    {
+      "id": "player-dd214b9d",
+      "name": "Jonas Fischer",
+      "active": true
+    },
+    {
+      "id": "player-6ba61f6d",
+      "name": "Vincent Hantuschke",
+      "active": true
+    },
+    {
+      "id": "player-d0d98aad",
+      "name": "Wolfgang Heß",
+      "active": true
+    },
+    {
+      "id": "player-f91d6aca",
+      "name": "Edouard Wetzel",
+      "active": true
+    },
+    {
+      "id": "player-595b852f",
+      "name": "Nico Außerbauer",
+      "active": true
+    },
+    {
+      "id": "player-29dc3001",
+      "name": "Bastiaan Schuil",
+      "active": false
+    },
+    {
+      "id": "player-e9c74f30",
+      "name": "Bennet Busch",
+      "active": true
+    },
+    {
+      "id": "player-05ac7d74",
+      "name": "Constantin Bruhn",
+      "active": true
+    },
+    {
+      "id": "player-0cfa9381",
+      "name": "Corbinian Gralka",
+      "active": true
+    },
+    {
+      "id": "player-c6630851",
+      "name": "Diego Santiago",
+      "active": true
+    },
+    {
+      "id": "player-74f6aecd",
+      "name": "Dominik Ilic",
+      "active": true
+    },
+    {
+      "id": "player-02ce969d",
+      "name": "Jakob Scheidl",
+      "active": true
+    },
+    {
+      "id": "player-baf85e40",
+      "name": "Karl Wandel",
+      "active": true
+    },
+    {
+      "id": "player-7d526962",
+      "name": "Leander Körner",
+      "active": true
+    },
+    {
+      "id": "player-b7fa4bd3",
+      "name": "Lorenz Lippert",
+      "active": true
+    },
+    {
+      "id": "player-3cedff66",
+      "name": "Luis Schmidt",
+      "active": true
+    },
+    {
+      "id": "player-7db659bb",
+      "name": "Lukas Weingut",
+      "active": true
+    },
+    {
+      "id": "player-582ca99f",
+      "name": "Vincent Kammermeier",
+      "active": true
+    },
+    {
+      "id": "player-2820c812",
+      "name": "Ludwig Gross",
+      "active": true
+    },
+    {
+      "id": "player-4bbec80c",
+      "name": "Marc",
+      "active": false
+    },
+    {
+      "id": "player-b068f0f3",
+      "name": "Marius Rausch",
+      "active": false
+    },
+    {
+      "id": "player-972e1c93",
+      "name": "Max Burrer",
+      "active": false
+    },
+    {
+      "id": "player-625d746b",
+      "name": "Nils Kötter",
+      "active": false
+    },
+    {
+      "id": "player-1dbb624a",
+      "name": "Philipp Kontusch",
+      "active": false
+    },
+    {
+      "id": "player-d722159e",
+      "name": "Philipp Pape",
+      "active": true
+    },
+    {
+      "id": "player-932a26f0",
+      "name": "Tim Lübbers",
+      "active": true
+    },
+    {
+      "id": "player-f1149e8e",
+      "name": "William Reutlinger",
       "active": true
     }
   ],
   "sessions": [
     {
-      "id": "s1",
-      "date": "2026-01-14",
-      "label": "Dienstagstraining",
-      "results": [
-        { "playerId": "p1", "teamId": "team-gruen", "goalsFor": 5, "goalsAgainst": 3 },
-        { "playerId": "p2", "teamId": "team-gruen", "goalsFor": 5, "goalsAgainst": 3 },
-        { "playerId": "p3", "teamId": "team-weiss", "goalsFor": 3, "goalsAgainst": 5 },
-        { "playerId": "p4", "teamId": "team-weiss", "goalsFor": 3, "goalsAgainst": 5 },
-        { "playerId": "p5", "teamId": "team-gruen", "goalsFor": 5, "goalsAgainst": 3 },
-        { "playerId": "p6", "teamId": "team-weiss", "goalsFor": 3, "goalsAgainst": 5 }
-      ]
-    },
-    {
-      "id": "s2",
-      "date": "2026-01-28",
-      "label": "Abendtraining",
-      "results": [
-        { "playerId": "p1", "teamId": "team-weiss", "goalsFor": 4, "goalsAgainst": 4 },
-        { "playerId": "p2", "teamId": "team-gruen", "goalsFor": 4, "goalsAgainst": 4 },
-        { "playerId": "p3", "teamId": "team-weiss", "goalsFor": 4, "goalsAgainst": 4 },
-        { "playerId": "p4", "teamId": "team-gruen", "goalsFor": 4, "goalsAgainst": 4 },
-        { "playerId": "p5", "teamId": "team-gruen", "goalsFor": 4, "goalsAgainst": 4 },
-        { "playerId": "p6", "teamId": "team-weiss", "goalsFor": 4, "goalsAgainst": 4 }
-      ]
-    },
-    {
-      "id": "s3",
-      "date": "2026-02-11",
-      "label": "Techniktraining",
-      "results": [
-        { "playerId": "p1", "teamId": "team-gruen", "goalsFor": 6, "goalsAgainst": 2 },
-        { "playerId": "p2", "teamId": "team-weiss", "goalsFor": 2, "goalsAgainst": 6 },
-        { "playerId": "p3", "teamId": "team-weiss", "goalsFor": 2, "goalsAgainst": 6 },
-        { "playerId": "p4", "teamId": "team-gruen", "goalsFor": 6, "goalsAgainst": 2 },
-        { "playerId": "p5", "teamId": "team-gruen", "goalsFor": 6, "goalsAgainst": 2 },
-        { "playerId": "p6", "teamId": "team-weiss", "goalsFor": 2, "goalsAgainst": 6 }
-      ]
-    },
-    {
-      "id": "s4",
-      "date": "2026-03-04",
-      "label": "Mittwochstraining",
-      "results": [
-        { "playerId": "p1", "teamId": "team-weiss", "goalsFor": 1, "goalsAgainst": 2 },
-        { "playerId": "p2", "teamId": "team-weiss", "goalsFor": 1, "goalsAgainst": 2 },
-        { "playerId": "p3", "teamId": "team-gruen", "goalsFor": 2, "goalsAgainst": 1 },
-        { "playerId": "p4", "teamId": "team-gruen", "goalsFor": 2, "goalsAgainst": 1 },
-        { "playerId": "p5", "teamId": "team-gruen", "goalsFor": 2, "goalsAgainst": 1 },
-        { "playerId": "p6", "teamId": "team-weiss", "goalsFor": 1, "goalsAgainst": 2 }
-      ]
-    },
-    {
       "id": "s5",
       "date": "2026-04-02",
       "label": "April Auftakt",
       "results": [
-        { "playerId": "p1", "teamId": "team-gruen", "goalsFor": 4, "goalsAgainst": 2 },
-        { "playerId": "p2", "teamId": "team-gruen", "goalsFor": 4, "goalsAgainst": 2 },
-        { "playerId": "p3", "teamId": "team-weiss", "goalsFor": 2, "goalsAgainst": 4 },
-        { "playerId": "p4", "teamId": "team-weiss", "goalsFor": 2, "goalsAgainst": 4 },
-        { "playerId": "p5", "teamId": "team-gruen", "goalsFor": 4, "goalsAgainst": 2 },
-        { "playerId": "p6", "teamId": "team-weiss", "goalsFor": 2, "goalsAgainst": 4 },
-        { "playerId": "p7", "teamId": "team-gruen", "goalsFor": 4, "goalsAgainst": 2 },
-        { "playerId": "p8", "teamId": "team-weiss", "goalsFor": 2, "goalsAgainst": 4 }
+        {
+          "playerId": "p7",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "p8",
+          "teamId": "team-weiss",
+          "goalsFor": 2,
+          "goalsAgainst": 4
+        }
       ]
     },
     {
@@ -145,14 +252,18 @@
       "date": "2026-04-07",
       "label": "April Technikabend",
       "results": [
-        { "playerId": "p1", "teamId": "team-weiss", "goalsFor": 3, "goalsAgainst": 3 },
-        { "playerId": "p2", "teamId": "team-gruen", "goalsFor": 5, "goalsAgainst": 3 },
-        { "playerId": "p3", "teamId": "team-weiss", "goalsFor": 3, "goalsAgainst": 5 },
-        { "playerId": "p4", "teamId": "team-gruen", "goalsFor": 5, "goalsAgainst": 3 },
-        { "playerId": "p5", "teamId": "team-gruen", "goalsFor": 5, "goalsAgainst": 3 },
-        { "playerId": "p6", "teamId": "team-weiss", "goalsFor": 3, "goalsAgainst": 5 },
-        { "playerId": "p7", "teamId": "team-weiss", "goalsFor": 3, "goalsAgainst": 3 },
-        { "playerId": "p8", "teamId": "team-gruen", "goalsFor": 5, "goalsAgainst": 3 }
+        {
+          "playerId": "p7",
+          "teamId": "team-weiss",
+          "goalsFor": 3,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "p8",
+          "teamId": "team-blau",
+          "goalsFor": 5,
+          "goalsAgainst": 3
+        }
       ]
     }
   ]

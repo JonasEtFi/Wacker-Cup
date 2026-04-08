@@ -1,8 +1,7 @@
 (function () {
-  const STORAGE_KEY = "wacker-cup-data";
   const ADMIN_SESSION_KEY = "wacker-cup-admin-session";
+  const API_URL = "/api/data";
   const EMPTY_SESSION_LABEL = "Trainingseinheit";
-  const defaultData = getDefaultData();
 
   const state = { data: null, adminUnlocked: false };
 
@@ -21,6 +20,7 @@
     scoreWhite: document.querySelector("#team-weiss-tore"),
     resultRows: document.querySelector("#ergebnis-zeilen"),
     sessionReset: document.querySelector("#ergebnis-form-reset"),
+    sessionDelete: document.querySelector("#ergebnis-loeschen"),
     sessionList: document.querySelector("#einheiten-liste"),
     resetData: document.querySelector("#daten-zuruecksetzen"),
     exportData: document.querySelector("#daten-export"),
@@ -48,9 +48,11 @@
     elements.adminLogin.addEventListener("click", unlockAdmin);
     elements.sessionForm.addEventListener("submit", onSessionSubmit);
     elements.sessionReset.addEventListener("click", resetSessionForm);
+    elements.sessionDelete.addEventListener("click", function () {
+      if (elements.sessionId.value) deleteSession(elements.sessionId.value);
+    });
     elements.resultRows.addEventListener("change", onTeamToggle);
     elements.resetData.addEventListener("click", async function () {
-      localStorage.removeItem(STORAGE_KEY);
       state.data = await loadData();
       resetSessionForm();
       renderTraining();
@@ -63,7 +65,6 @@
       if (!file) return;
       state.data = JSON.parse(await file.text());
       normalizeData(state.data);
-      await persistData(state.data);
       resetSessionForm();
       renderTraining();
       event.target.value = "";
@@ -115,7 +116,7 @@
       .sort(function (a, b) { return b.date.localeCompare(a.date); })
       .map(function (session) {
         const score = getSessionScoreSummary(session);
-        return '<article class="session-item"><div class="session-meta"><strong>' + escapeHtml(session.label || EMPTY_SESSION_LABEL) + '</strong><span class="session-line">' + formatDate(session.date) + "</span>" + renderScoreboard(score) + '</div><button class="button button-secondary" data-action="edit-session" data-session-id="' + session.id + '">Bearbeiten</button></article>';
+        return '<article class="session-item"><div class="session-meta"><strong>' + escapeHtml(session.label || EMPTY_SESSION_LABEL) + '</strong><span class="session-line">' + formatDate(session.date) + "</span>" + renderScoreboard(score) + '</div><div class="form-actions"><button class="button button-secondary" data-action="edit-session" data-session-id="' + session.id + '">Bearbeiten</button><button class="button button-secondary" data-action="delete-session" data-session-id="' + session.id + '">Löschen</button></div></article>';
       })
       .join("");
 
@@ -123,6 +124,11 @@
       button.addEventListener("click", function () {
         const session = state.data.sessions.find(function (item) { return item.id === button.dataset.sessionId; });
         if (session) fillSessionForm(session);
+      });
+    });
+    elements.sessionList.querySelectorAll('[data-action="delete-session"]').forEach(function (button) {
+      button.addEventListener("click", function () {
+        deleteSession(button.dataset.sessionId);
       });
     });
   }
@@ -177,6 +183,15 @@
     renderSessionList();
   }
 
+  async function deleteSession(sessionId) {
+    state.data.sessions = state.data.sessions.filter(function (session) {
+      return session.id !== sessionId;
+    });
+    await persistData(state.data);
+    resetSessionForm();
+    renderSessionList();
+  }
+
   function buildResults(scoreBlue, scoreWhite) {
     const results = [];
     elements.resultRows.querySelectorAll(".result-row").forEach(function (row) {
@@ -190,20 +205,14 @@
   }
 
   async function loadData() {
-    const localData = localStorage.getItem(STORAGE_KEY);
-    if (localData) {
-      const parsed = JSON.parse(localData);
-      normalizeData(parsed);
-      return parsed;
-    }
     try {
-      const response = await fetch("./data/data.json", { cache: "no-store" });
+      const response = await fetch(getDataUrl(), { cache: "no-store" });
       if (!response.ok) throw new Error("Die JSON-Daten konnten nicht geladen werden.");
       const parsed = await response.json();
       normalizeData(parsed);
       return parsed;
     } catch (_error) {
-      return cloneData(defaultData);
+      throw new Error("Die JSON-Daten konnten nicht geladen werden. Bitte die Seite ueber einen lokalen Server oder GitHub Pages aufrufen.");
     }
   }
 
@@ -253,8 +262,18 @@
     );
   }
 
-  function persistData(data) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  async function persistData(data) {
+    if (!isLocalServer()) {
+      return data;
+    }
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+    if (!response.ok) {
+      throw new Error("Die JSON-Datei konnte nicht gespeichert werden.");
+    }
     return data;
   }
 
@@ -282,10 +301,6 @@
     return prefix + "-" + Math.random().toString(36).slice(2, 10);
   }
 
-  function cloneData(data) {
-    return JSON.parse(JSON.stringify(data));
-  }
-
   function escapeHtml(value) {
     return String(value)
       .replaceAll("&", "&amp;")
@@ -295,30 +310,12 @@
       .replaceAll("'", "&#39;");
   }
 
-  function getDefaultData() {
-    return {
-      metadata: {
-        appTitle: "Wacker Cup",
-        seasonLabel: "Saison 2025/2026",
-        adminPassword: "HCWAP",
-        adminPasswordHash: "7a12c01c30a5f3abedd5ec43ff6a3f84cd5a404b4860e9f6d476074f7e287a3a"
-      },
-      teams: [
-        { id: "team-blau", name: "Blau" },
-        { id: "team-weiss", name: "Weiß" }
-      ],
-      players: [
-        { id: "p1", name: "Max Bauer", active: true },
-        { id: "p2", name: "Tobias Lang", active: true },
-        { id: "p3", name: "Lukas Schmid", active: true },
-        { id: "p4", name: "Felix Meier", active: true },
-        { id: "p5", name: "Jonas Huber", active: true },
-        { id: "p6", name: "David Koch", active: true },
-        { id: "p7", name: "Jonas Fischer", active: true },
-        { id: "p8", name: "Felix Winkliner", active: true }
-      ],
-      sessions: []
-    };
+  function getDataUrl() {
+    return isLocalServer() ? API_URL : "./data/data.json";
+  }
+
+  function isLocalServer() {
+    return location.protocol.indexOf("http") === 0 && (location.hostname === "127.0.0.1" || location.hostname === "localhost");
   }
 
   function setTodayAsDefault() {

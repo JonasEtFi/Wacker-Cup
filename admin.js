@@ -1,7 +1,6 @@
 (function () {
-  const STORAGE_KEY = "wacker-cup-data";
   const ADMIN_SESSION_KEY = "wacker-cup-admin-session";
-  const defaultData = getDefaultData();
+  const API_URL = "/api/data";
 
   const state = { data: null, adminUnlocked: false };
 
@@ -48,7 +47,6 @@
       if (elements.playerId.value) deletePlayer(elements.playerId.value);
     });
     elements.resetData.addEventListener("click", async function () {
-      localStorage.removeItem(STORAGE_KEY);
       state.data = await loadData();
       resetPlayerForm();
       renderAdmin();
@@ -61,7 +59,6 @@
       if (!file) return;
       state.data = JSON.parse(await file.text());
       normalizeData(state.data);
-      await persistData(state.data);
       resetPlayerForm();
       renderAdmin();
       event.target.value = "";
@@ -148,20 +145,14 @@
   }
 
   async function loadData() {
-    const localData = localStorage.getItem(STORAGE_KEY);
-    if (localData) {
-      const parsed = JSON.parse(localData);
-      normalizeData(parsed);
-      return parsed;
-    }
     try {
-      const response = await fetch("./data/data.json", { cache: "no-store" });
+      const response = await fetch(getDataUrl(), { cache: "no-store" });
       if (!response.ok) throw new Error("Die JSON-Daten konnten nicht geladen werden.");
       const parsed = await response.json();
       normalizeData(parsed);
       return parsed;
     } catch (_error) {
-      return cloneData(defaultData);
+      throw new Error("Die JSON-Daten konnten nicht geladen werden. Bitte die Seite ueber einen lokalen Server oder GitHub Pages aufrufen.");
     }
   }
 
@@ -192,8 +183,18 @@
     });
   }
 
-  function persistData(data) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  async function persistData(data) {
+    if (!isLocalServer()) {
+      return data;
+    }
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+    if (!response.ok) {
+      throw new Error("Die JSON-Datei konnte nicht gespeichert werden.");
+    }
     return data;
   }
 
@@ -217,10 +218,6 @@
     return prefix + "-" + Math.random().toString(36).slice(2, 10);
   }
 
-  function cloneData(data) {
-    return JSON.parse(JSON.stringify(data));
-  }
-
   function escapeHtml(value) {
     return String(value)
       .replaceAll("&", "&amp;")
@@ -230,29 +227,12 @@
       .replaceAll("'", "&#39;");
   }
 
-  function getDefaultData() {
-    return {
-      metadata: {
-        appTitle: "Wacker Cup",
-        seasonLabel: "Saison 2025/2026",
-        adminPassword: "HCWAP",
-        adminPasswordHash: "7a12c01c30a5f3abedd5ec43ff6a3f84cd5a404b4860e9f6d476074f7e287a3a"
-      },
-      teams: [
-        { id: "team-blau", name: "Blau" },
-        { id: "team-weiss", name: "Weiß" }
-      ],
-      players: [
-        { id: "p1", name: "Max Bauer", active: true },
-        { id: "p2", name: "Tobias Lang", active: true },
-        { id: "p3", name: "Lukas Schmid", active: true },
-        { id: "p4", name: "Felix Meier", active: true },
-        { id: "p5", name: "Jonas Huber", active: true },
-        { id: "p6", name: "David Koch", active: true },
-        { id: "p7", name: "Jonas Fischer", active: true },
-        { id: "p8", name: "Felix Winkliner", active: true }
-      ],
-      sessions: []
-    };
+  function getDataUrl() {
+    return isLocalServer() ? API_URL : "./data/data.json";
   }
+
+  function isLocalServer() {
+    return location.protocol.indexOf("http") === 0 && (location.hostname === "127.0.0.1" || location.hostname === "localhost");
+  }
+
 })();

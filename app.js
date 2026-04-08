@@ -1,6 +1,5 @@
 (function () {
-  const STORAGE_KEY = "wacker-cup-data";
-  const defaultData = getDefaultData();
+  const API_URL = "/api/data";
 
   const state = {
     data: null,
@@ -35,7 +34,6 @@
   async function bootstrap() {
     state.data = await loadData();
     normalizeData(state.data);
-    seedCurrentMonthSessions(state.data);
     state.selectedMonth = getCurrentMonthKey();
     bindEvents();
     render();
@@ -207,17 +205,12 @@
   }
 
   async function loadData() {
-    const localData = localStorage.getItem(STORAGE_KEY);
-    if (localData) {
-      return JSON.parse(localData);
-    }
-
     try {
-      const response = await fetch("./data/data.json", { cache: "no-store" });
+      const response = await fetch(getDataUrl(), { cache: "no-store" });
       if (!response.ok) throw new Error("Die JSON-Daten konnten nicht geladen werden.");
       return await response.json();
     } catch (_error) {
-      return cloneData(defaultData);
+      throw new Error("Die JSON-Daten konnten nicht geladen werden. Bitte die Seite ueber einen lokalen Server oder GitHub Pages aufrufen.");
     }
   }
 
@@ -301,44 +294,6 @@
     });
   }
 
-  function seedCurrentMonthSessions(data) {
-    const monthKey = getCurrentMonthKey();
-    if (data.sessions.some(function (session) { return session.date.slice(0, 7) === monthKey; })) return;
-
-    data.sessions.push(
-      { id: createId("session"), date: monthKey + "-02", label: "Monatsstart", results: baseMonthResultsA() },
-      { id: createId("session"), date: monthKey + "-07", label: "Technikabend", results: baseMonthResultsB() }
-    );
-
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-  }
-
-  function baseMonthResultsA() {
-    return [
-      { playerId: "p1", teamId: "team-blau", goalsFor: 4, goalsAgainst: 2 },
-      { playerId: "p2", teamId: "team-blau", goalsFor: 4, goalsAgainst: 2 },
-      { playerId: "p3", teamId: "team-weiss", goalsFor: 2, goalsAgainst: 4 },
-      { playerId: "p4", teamId: "team-weiss", goalsFor: 2, goalsAgainst: 4 },
-      { playerId: "p5", teamId: "team-blau", goalsFor: 4, goalsAgainst: 2 },
-      { playerId: "p6", teamId: "team-weiss", goalsFor: 2, goalsAgainst: 4 },
-      { playerId: "p7", teamId: "team-blau", goalsFor: 4, goalsAgainst: 2 },
-      { playerId: "p8", teamId: "team-weiss", goalsFor: 2, goalsAgainst: 4 }
-    ];
-  }
-
-  function baseMonthResultsB() {
-    return [
-      { playerId: "p1", teamId: "team-weiss", goalsFor: 3, goalsAgainst: 3 },
-      { playerId: "p2", teamId: "team-blau", goalsFor: 5, goalsAgainst: 3 },
-      { playerId: "p3", teamId: "team-weiss", goalsFor: 3, goalsAgainst: 5 },
-      { playerId: "p4", teamId: "team-blau", goalsFor: 5, goalsAgainst: 3 },
-      { playerId: "p5", teamId: "team-blau", goalsFor: 5, goalsAgainst: 3 },
-      { playerId: "p6", teamId: "team-weiss", goalsFor: 3, goalsAgainst: 5 },
-      { playerId: "p7", teamId: "team-weiss", goalsFor: 3, goalsAgainst: 3 },
-      { playerId: "p8", teamId: "team-blau", goalsFor: 5, goalsAgainst: 3 }
-    ];
-  }
-
   function normalizeData(data) {
     data.metadata = data.metadata || {};
     data.players = (data.players || []).map(function (player) {
@@ -411,10 +366,6 @@
     return prefix + "-" + Math.random().toString(36).slice(2, 10);
   }
 
-  function cloneData(data) {
-    return JSON.parse(JSON.stringify(data));
-  }
-
   function escapeHtml(value) {
     return String(value)
       .replaceAll("&", "&amp;")
@@ -424,64 +375,12 @@
       .replaceAll("'", "&#39;");
   }
 
-  function getDefaultData() {
-    return {
-      metadata: {
-        appTitle: "Wacker Cup",
-        seasonLabel: "Saison 2025/2026",
-        adminPassword: "HCWAP",
-        adminPasswordHash: "7a12c01c30a5f3abedd5ec43ff6a3f84cd5a404b4860e9f6d476074f7e287a3a"
-      },
-      teams: [
-        { id: "team-blau", name: "Blau" },
-        { id: "team-weiss", name: "Weiß" }
-      ],
-      players: [
-        { id: "p1", name: "Max Bauer", active: true },
-        { id: "p2", name: "Tobias Lang", active: true },
-        { id: "p3", name: "Lukas Schmid", active: true },
-        { id: "p4", name: "Felix Meier", active: true },
-        { id: "p5", name: "Jonas Huber", active: true },
-        { id: "p6", name: "David Koch", active: true },
-        { id: "p7", name: "Jonas Fischer", active: true },
-        { id: "p8", name: "Felix Winkliner", active: true }
-      ],
-      sessions: [
-        { id: "s1", date: "2026-01-14", label: "Dienstagstraining", results: [
-          { playerId: "p1", teamId: "team-blau", goalsFor: 5, goalsAgainst: 3 },
-          { playerId: "p2", teamId: "team-blau", goalsFor: 5, goalsAgainst: 3 },
-          { playerId: "p3", teamId: "team-weiss", goalsFor: 3, goalsAgainst: 5 },
-          { playerId: "p4", teamId: "team-weiss", goalsFor: 3, goalsAgainst: 5 },
-          { playerId: "p5", teamId: "team-blau", goalsFor: 5, goalsAgainst: 3 },
-          { playerId: "p6", teamId: "team-weiss", goalsFor: 3, goalsAgainst: 5 }
-        ] },
-        { id: "s2", date: "2026-01-28", label: "Abendtraining", results: [
-          { playerId: "p1", teamId: "team-weiss", goalsFor: 4, goalsAgainst: 4 },
-          { playerId: "p2", teamId: "team-blau", goalsFor: 4, goalsAgainst: 4 },
-          { playerId: "p3", teamId: "team-weiss", goalsFor: 4, goalsAgainst: 4 },
-          { playerId: "p4", teamId: "team-blau", goalsFor: 4, goalsAgainst: 4 },
-          { playerId: "p5", teamId: "team-blau", goalsFor: 4, goalsAgainst: 4 },
-          { playerId: "p6", teamId: "team-weiss", goalsFor: 4, goalsAgainst: 4 }
-        ] },
-        { id: "s3", date: "2026-02-11", label: "Techniktraining", results: [
-          { playerId: "p1", teamId: "team-blau", goalsFor: 6, goalsAgainst: 2 },
-          { playerId: "p2", teamId: "team-weiss", goalsFor: 2, goalsAgainst: 6 },
-          { playerId: "p3", teamId: "team-weiss", goalsFor: 2, goalsAgainst: 6 },
-          { playerId: "p4", teamId: "team-blau", goalsFor: 6, goalsAgainst: 2 },
-          { playerId: "p5", teamId: "team-blau", goalsFor: 6, goalsAgainst: 2 },
-          { playerId: "p6", teamId: "team-weiss", goalsFor: 2, goalsAgainst: 6 }
-        ] },
-        { id: "s4", date: "2026-03-04", label: "Mittwochstraining", results: [
-          { playerId: "p1", teamId: "team-weiss", goalsFor: 1, goalsAgainst: 2 },
-          { playerId: "p2", teamId: "team-weiss", goalsFor: 1, goalsAgainst: 2 },
-          { playerId: "p3", teamId: "team-blau", goalsFor: 2, goalsAgainst: 1 },
-          { playerId: "p4", teamId: "team-blau", goalsFor: 2, goalsAgainst: 1 },
-          { playerId: "p5", teamId: "team-blau", goalsFor: 2, goalsAgainst: 1 },
-          { playerId: "p6", teamId: "team-weiss", goalsFor: 1, goalsAgainst: 2 }
-        ] },
-        { id: "s5", date: "2026-04-02", label: "April Auftakt", results: baseMonthResultsA() },
-        { id: "s6", date: "2026-04-07", label: "April Technikabend", results: baseMonthResultsB() }
-      ]
-    };
+  function getDataUrl() {
+    return isLocalServer() ? API_URL : "./data/data.json";
   }
+
+  function isLocalServer() {
+    return location.protocol.indexOf("http") === 0 && (location.hostname === "127.0.0.1" || location.hostname === "localhost");
+  }
+
 })();
