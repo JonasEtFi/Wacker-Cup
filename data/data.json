@@ -17,11 +17,6 @@
   ],
   "players": [
     {
-      "id": "p7",
-      "name": "Jonas Fischer",
-      "active": true
-    },
-    {
       "id": "p8",
       "name": "Felix Winkler",
       "active": true
@@ -229,40 +224,45 @@
   ],
   "sessions": [
     {
-      "id": "s5",
-      "date": "2026-04-02",
-      "label": "April Auftakt",
+      "id": "session-f71feac0",
+      "date": "2026-04-09",
+      "label": "Penalty",
       "results": [
         {
-          "playerId": "p7",
-          "teamId": "team-blau",
-          "goalsFor": 4,
+          "playerId": "player-07346fd9",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
           "goalsAgainst": 2
         },
         {
-          "playerId": "p8",
-          "teamId": "team-weiss",
+          "playerId": "player-4c45d554",
+          "teamId": "team-blau",
           "goalsFor": 2,
-          "goalsAgainst": 4
-        }
-      ]
-    },
-    {
-      "id": "s6",
-      "date": "2026-04-07",
-      "label": "April Technikabend",
-      "results": [
-        {
-          "playerId": "p7",
-          "teamId": "team-weiss",
-          "goalsFor": 3,
-          "goalsAgainst": 3
+          "goalsAgainst": 1
         },
         {
-          "playerId": "p8",
+          "playerId": "player-5c374640",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-dd214b9d",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-6ba61f6d",
           "teamId": "team-blau",
-          "goalsFor": 5,
-          "goalsAgainst": 3
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-d0d98aad",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
         }
       ]
     }
