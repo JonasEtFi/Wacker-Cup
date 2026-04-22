@@ -220,6 +220,16 @@
       "id": "player-f1149e8e",
       "name": "William Reutlinger",
       "active": true
+    },
+    {
+      "id": "player-1ea4646b",
+      "name": "Felix Roth",
+      "active": true
+    },
+    {
+      "id": "player-9d0bb64c",
+      "name": "Florian Gümmer",
+      "active": true
     }
   ],
   "sessions": [
@@ -263,6 +273,145 @@
           "teamId": "team-weiss",
           "goalsFor": 1,
           "goalsAgainst": 2
+        }
+      ]
+    },
+    {
+      "id": "session-b5dc92e8",
+      "date": "2026-04-22",
+      "label": "Großfeld",
+      "results": [
+        {
+          "playerId": "player-07346fd9",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-e9c74f30",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-0cfa9381",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-4c45d554",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-c6630851",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-74f6aecd",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-1ea4646b",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "p8",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-9d0bb64c",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-5c374640",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-ab8bee9e",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-dd214b9d",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-57bf9c58",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-baf85e40",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-7d526962",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-2820c812",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-7db659bb",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-595b852f",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-6ba61f6d",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-582ca99f",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-405f970e",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-d0d98aad",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
         }
       ]
     }
