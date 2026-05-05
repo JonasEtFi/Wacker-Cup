@@ -511,6 +511,200 @@
           "goalsAgainst": 0
         }
       ]
+    },
+    {
+      "id": "session-026a2049",
+      "date": "2026-04-28",
+      "label": "royal rumble",
+      "results": [
+        {
+          "playerId": "player-e9c74f30",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-05ac7d74",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-0cfa9381",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-c6630851",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-74f6aecd",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-1ea4646b",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-5c374640",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-57bf9c58",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-baf85e40",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-7d526962",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-2820c812",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-3cedff66",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-595b852f",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-22a66db6",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-6ba61f6d",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        }
+      ]
+    },
+    {
+      "id": "session-630ca520",
+      "date": "2026-04-30",
+      "label": "Donnerstag",
+      "results": [
+        {
+          "playerId": "player-e9c74f30",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-05ac7d74",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-0cfa9381",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-c6630851",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-74f6aecd",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "p8",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-9d0bb64c",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-5c374640",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-57bf9c58",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-2820c812",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-3cedff66",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-7db659bb",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-595b852f",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-22a66db6",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-6ba61f6d",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        }
+      ]
     }
   ]
 }
