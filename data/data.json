@@ -230,6 +230,11 @@
       "id": "player-9d0bb64c",
       "name": "Florian Gümmer",
       "active": true
+    },
+    {
+      "id": "player-8959f11d",
+      "name": "Patrick",
+      "active": true
     }
   ],
   "sessions": [
@@ -703,6 +708,85 @@
           "teamId": "team-blau",
           "goalsFor": 1,
           "goalsAgainst": 0
+        }
+      ]
+    },
+    {
+      "id": "session-d457590e",
+      "date": "2026-05-05",
+      "label": "Tanz in den Mai",
+      "results": [
+        {
+          "playerId": "player-c6630851",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-74f6aecd",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-1ea4646b",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 4
+        },
+        {
+          "playerId": "player-57bf9c58",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-baf85e40",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-7d526962",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-2820c812",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 4
+        },
+        {
+          "playerId": "player-3cedff66",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 4
+        },
+        {
+          "playerId": "player-7db659bb",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-595b852f",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 4
+        },
+        {
+          "playerId": "player-8959f11d",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-582ca99f",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 4
         }
       ]
     }
