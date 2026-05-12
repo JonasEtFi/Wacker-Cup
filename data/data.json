@@ -789,6 +789,85 @@
           "goalsAgainst": 4
         }
       ]
+    },
+    {
+      "id": "session-0aba45fc",
+      "date": "2026-05-07",
+      "label": "Donnerstag",
+      "results": [
+        {
+          "playerId": "player-c6630851",
+          "teamId": "team-blau",
+          "goalsFor": 3,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-74f6aecd",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "p8",
+          "teamId": "team-blau",
+          "goalsFor": 3,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-9d0bb64c",
+          "teamId": "team-blau",
+          "goalsFor": 3,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-5c374640",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-dd214b9d",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-57bf9c58",
+          "teamId": "team-blau",
+          "goalsFor": 3,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-baf85e40",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-7d526962",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-2820c812",
+          "teamId": "team-blau",
+          "goalsFor": 3,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-595b852f",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-6ba61f6d",
+          "teamId": "team-blau",
+          "goalsFor": 3,
+          "goalsAgainst": 1
+        }
+      ]
     }
   ]
 }
