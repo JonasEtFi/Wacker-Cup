@@ -1188,6 +1188,12 @@
           "goalsAgainst": 0
         },
         {
+          "playerId": "player-6ba61f6d",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
           "playerId": "player-582ca99f",
           "teamId": "team-blau",
           "goalsFor": 1,
