@@ -235,6 +235,16 @@
       "id": "player-8959f11d",
       "name": "Patrick",
       "active": true
+    },
+    {
+      "id": "player-4d454b9e",
+      "name": "Jerry",
+      "active": true
+    },
+    {
+      "id": "player-766ddea6",
+      "name": "Velten",
+      "active": true
     }
   ],
   "sessions": [
@@ -826,6 +836,12 @@
           "goalsAgainst": 3
         },
         {
+          "playerId": "player-4d454b9e",
+          "teamId": "team-blau",
+          "goalsFor": 3,
+          "goalsAgainst": 1
+        },
+        {
           "playerId": "player-dd214b9d",
           "teamId": "team-weiss",
           "goalsFor": 1,
@@ -866,6 +882,316 @@
           "teamId": "team-blau",
           "goalsFor": 3,
           "goalsAgainst": 1
+        }
+      ]
+    },
+    {
+      "id": "session-74338181",
+      "date": "2026-05-12",
+      "label": "Dienstag",
+      "results": [
+        {
+          "playerId": "player-07346fd9",
+          "teamId": "team-weiss",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-05ac7d74",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-c6630851",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-74f6aecd",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-5c374640",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-57bf9c58",
+          "teamId": "team-weiss",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-baf85e40",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-7d526962",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-2820c812",
+          "teamId": "team-weiss",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-3cedff66",
+          "teamId": "team-weiss",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-7db659bb",
+          "teamId": "team-weiss",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-625d746b",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-8959f11d",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-766ddea6",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-6ba61f6d",
+          "teamId": "team-weiss",
+          "goalsFor": 2,
+          "goalsAgainst": 2
+        }
+      ]
+    },
+    {
+      "id": "session-50da86c4",
+      "date": "2026-05-14",
+      "label": "Feiertags Kick",
+      "results": [
+        {
+          "playerId": "player-0cfa9381",
+          "teamId": "team-weiss",
+          "goalsFor": 3,
+          "goalsAgainst": 5
+        },
+        {
+          "playerId": "player-c6630851",
+          "teamId": "team-blau",
+          "goalsFor": 5,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-74f6aecd",
+          "teamId": "team-blau",
+          "goalsFor": 5,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-1ea4646b",
+          "teamId": "team-blau",
+          "goalsFor": 5,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-5c374640",
+          "teamId": "team-blau",
+          "goalsFor": 5,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-dd214b9d",
+          "teamId": "team-blau",
+          "goalsFor": 5,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-baf85e40",
+          "teamId": "team-weiss",
+          "goalsFor": 3,
+          "goalsAgainst": 5
+        },
+        {
+          "playerId": "player-3cedff66",
+          "teamId": "team-blau",
+          "goalsFor": 5,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-7db659bb",
+          "teamId": "team-blau",
+          "goalsFor": 5,
+          "goalsAgainst": 3
+        },
+        {
+          "playerId": "player-6ba61f6d",
+          "teamId": "team-weiss",
+          "goalsFor": 3,
+          "goalsAgainst": 5
+        }
+      ]
+    },
+    {
+      "id": "session-610fd5c8",
+      "date": "2026-05-19",
+      "label": "Dienstag",
+      "results": [
+        {
+          "playerId": "player-e9c74f30",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 4
+        },
+        {
+          "playerId": "player-74f6aecd",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 4
+        },
+        {
+          "playerId": "player-9d0bb64c",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-5c374640",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 4
+        },
+        {
+          "playerId": "player-57bf9c58",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 4
+        },
+        {
+          "playerId": "player-bdc1d4c9",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-baf85e40",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-2820c812",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-3cedff66",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-7db659bb",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-22a66db6",
+          "teamId": "team-weiss",
+          "goalsFor": 0,
+          "goalsAgainst": 4
+        },
+        {
+          "playerId": "player-766ddea6",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-6ba61f6d",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-582ca99f",
+          "teamId": "team-blau",
+          "goalsFor": 4,
+          "goalsAgainst": 0
+        }
+      ]
+    },
+    {
+      "id": "session-dc9ade38",
+      "date": "2026-05-26",
+      "label": "Mal Vinci Vertrauen",
+      "results": [
+        {
+          "playerId": "player-e9c74f30",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-c6630851",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-74f6aecd",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-57bf9c58",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-3cedff66",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-d722159e",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-932a26f0",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
+        },
+        {
+          "playerId": "player-582ca99f",
+          "teamId": "team-blau",
+          "goalsFor": 1,
+          "goalsAgainst": 0
         }
       ]
     }
