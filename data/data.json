@@ -1182,7 +1182,7 @@
           "goalsAgainst": 0
         },
         {
-          "playerId": "player-932a26f0",
+          "playerId": "player-22a66db6",
           "teamId": "team-blau",
           "goalsFor": 1,
           "goalsAgainst": 0
@@ -1197,6 +1197,98 @@
           "playerId": "player-582ca99f",
           "teamId": "team-blau",
           "goalsFor": 1,
+          "goalsAgainst": 0
+        }
+      ]
+    },
+    {
+      "id": "session-714552fc",
+      "date": "2026-05-21",
+      "label": "Trainingseinheit",
+      "results": [
+        {
+          "playerId": "player-07346fd9",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-e9c74f30",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-c6630851",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-74f6aecd",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "p8",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-5c374640",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-57bf9c58",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-baf85e40",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-7d526962",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        },
+        {
+          "playerId": "player-7db659bb",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-766ddea6",
+          "teamId": "team-blau",
+          "goalsFor": 2,
+          "goalsAgainst": 1
+        },
+        {
+          "playerId": "player-6ba61f6d",
+          "teamId": "team-weiss",
+          "goalsFor": 1,
+          "goalsAgainst": 2
+        }
+      ]
+    },
+    {
+      "id": "session-8c1e7923",
+      "date": "2026-05-28",
+      "label": "Lukki +- 0",
+      "results": [
+        {
+          "playerId": "player-7db659bb",
+          "teamId": "team-blau",
+          "goalsFor": 0,
           "goalsAgainst": 0
         }
       ]
